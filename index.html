@@ -208,38 +208,82 @@
             font-size: 1.5rem;
         }
 
-        /* Testimonials Section */
-        .testimonials {
+        /* Blog Section */
+        .blog {
             background-color: #25303f;
         }
 
-        .testimonial-grid {
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
-        .testimonial-card {
+        .blog-card {
             background-color: #1e2838;
             border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
             padding: 2rem;
-            position: relative;
         }
 
-        .quote-mark {
-            font-size: 5rem;
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            opacity: 0.1;
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
             color: #e84393;
         }
 
-        .reader-name {
-            font-weight: 700;
-            color: #e84393;
-            margin-top: 1rem;
+        .blog-date {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
             display: block;
+        }
+
+        .blog-excerpt {
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: #e84393;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #d63384;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-tag {
+            background-color: rgba(232, 67, 147, 0.1);
+            color: #e84393;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
 
         /* Author Section */
@@ -403,6 +447,11 @@
             font-size: 1.1rem;
             line-height: 1.7;
         }
+
+        .view-all-posts {
+            text-align: center;
+            margin-top: 3rem;
+        }
     </style>
     <!-- Font imports -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -423,6 +472,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#chapters">Chapters</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#author">Author</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -513,35 +563,63 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials section">
+    <!-- Blog Section -->
+    <section id="blog" class="blog section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Reader Experiences</h2>
-                <p class="subtitle">How Love: The Truths, The Myths, The Lessons is resonating</p>
+                <h2>From the Blog</h2>
+                <p class="subtitle">Lin's thoughts on love, relationships, and self-discovery</p>
             </div>
             
-            <div class="testimonial-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card fade-in">
-                    <div class="quote-mark">"</div>
-                    <p>I've highlighted nearly every page of this book. Lin's honesty about her journey through self-criticism to self-compassion gave me permission to be gentler with myself. This isn't just about romantic love—it's about the most important relationship we'll ever have: the one with ourselves.</p>
-                    <span class="reader-name">— Sarah K.</span>
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card fade-in">
+                    <img src="/api/placeholder/600/400" alt="Blog post image" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">The Hidden Power of Boundaries in Relationships</h3>
+                        <span class="blog-date">April 2, 2025</span>
+                        <p class="blog-excerpt">For years, I believed that having no boundaries meant I was being selfless and loving. It took me years to realize that boundaries aren't walls—they're the foundation that allows true intimacy to flourish...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Boundaries</span>
+                            <span class="blog-tag">Self-Care</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card fade-in">
-                    <div class="quote-mark">"</div>
-                    <p>The chapter on boundaries as freedom was exactly what I needed. For years I've equated having no boundaries with being loving. This book helped me see how setting healthy limits actually creates space for more authentic connection.</p>
-                    <span class="reader-name">— Michael T.</span>
+                <!-- Blog Post 2 -->
+                <div class="blog-card fade-in">
+                    <img src="/api/placeholder/600/400" alt="Blog post image" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">What Heartbreak Taught Me About Resilience</h3>
+                        <span class="blog-date">March 15, 2025</span>
+                        <p class="blog-excerpt">After my most devastating breakup, I found myself in a place I never expected—a deeper relationship with myself. Here's how pain can be the doorway to discovering your own strength...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Healing</span>
+                            <span class="blog-tag">Growth</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card fade-in">
-                    <div class="quote-mark">"</div>
-                    <p>I read this book in the aftermath of a difficult breakup, and it was like having a wise friend guide me through the pain toward something better. Lin doesn't offer empty platitudes—she offers hard-earned wisdom that actually helps you heal.</p>
-                    <span class="reader-name">— Jessica M.</span>
+                <!-- Blog Post 3 -->
+                <div class="blog-card fade-in">
+                    <img src="/api/placeholder/600/400" alt="Blog post image" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">The Liberation of Loving Without Expectation</h3>
+                        <span class="blog-date">February 28, 2025</span>
+                        <p class="blog-excerpt">We're taught that love is transactional—that we give to receive. But what happens when we break free from that mindset and learn to love simply for the joy of loving?</p>
+                        <a href="#" class="read-more">Read More →</a>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Unconditional Love</span>
+                            <span class="blog-tag">Freedom</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="view-all-posts fade-in">
+                <a href="#" class="btn btn-primary">View All Posts</a>
             </div>
         </div>
     </section>
